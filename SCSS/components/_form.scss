@@ -1,0 +1,19 @@
+.form {
+  @include flex($dir: column);
+
+  &__label--hidden {
+    display: none;
+    outline: none;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 5px solid $color-primary;
+    padding: $padding-mobile;
+    margin-bottom: $margin-sm;
+    font-size: .9375rem;
+    width: 80%;
+    outline: none;
+    @extend %center;
+  }
+}

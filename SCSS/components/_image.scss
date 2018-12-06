@@ -1,0 +1,15 @@
+.img {
+  &--avatar {
+    width: 40%;
+    align-self: center;
+    margin-top: $margin-sm;
+  }
+
+  &--frame {
+    display: block;
+    border: 1px solid $font-color;
+    width: 90%;
+    padding: 1rem;
+    @extend %center;
+  }  
+}

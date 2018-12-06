@@ -1,0 +1,11 @@
+@function col-width($col) {
+  $total-col: 12;
+  @return percentage($col / $total-col);
+}
+
+@function percent($col) {
+  $get-col: $col;
+  $total-col: 12;
+  @return percentage($get-col / $total-col);
+}
+

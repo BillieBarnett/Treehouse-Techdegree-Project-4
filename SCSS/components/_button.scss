@@ -1,0 +1,67 @@
+$buttonList: (
+  'default',
+  'success', 
+  'error', 
+  'warning', 
+  'info');
+
+@each $button, $color in $btn-colors {
+  .btn--#{$button} {
+    background-color: $color;
+  }
+}
+
+.btn-- {
+  &default {
+    background-color: map-get($btn-colors, 'default');
+  }
+  &success {
+    background-color: map-get($btn-colors, "success");
+  }
+  &error {
+    background-color: map-get($btn-colors, "error");
+  }
+  &warning {
+    background-color: map-get($btn-colors, "warning");
+  }
+  &info {
+    background-color: map-get($btn-colors, "info");
+  }
+}
+
+.btn--default {
+  background-color: #50fce5;
+}
+
+//Button Mixin Loop
+@each $button in $buttonList {
+    .btn--#{$button} {
+      outline: none;
+      @include button(
+        
+        ($btn-colors, #{$button}));
+      @include large-view {
+          flex: 1;
+          margin: 0 .5rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken( (map-get($btn-colors, #{$button}) ), 25%);
+      }
+    }
+};
+
+@include large-view {
+
+  .grid__col--12 {
+    @include flex($dir: row, $just: center);
+    p {text-align: left;}
+  }
+}
+
+
+

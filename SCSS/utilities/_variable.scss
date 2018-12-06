@@ -1,0 +1,68 @@
+/***********************
+Colors
+***********************/
+
+// General Colors
+
+$color-primary: #50fcba;
+$color-default: #50fce5;
+$nav-color: #3dc792;
+$font-color: #878787;
+$white: #fff;
+
+//Button Colors
+
+$btn-colors: (
+  'default': #50fce5,
+  'success': #75f97c,
+  'error': #f9849d,
+  'warning': #f25d07,
+  'info': #aa71ce,
+);
+
+//Grid Colors
+
+$grid-colors: (
+  'col--12': #67FAC4,
+  'col--6': #2F89D8,
+  'col--4': #3EE9F4,
+  'col--3': #C6A4FD,
+  'col--5': #7AD585,
+  'col--7': #D58E7A,
+  'col--8': #DD6551,
+);
+
+/***********************
+Layout
+***********************/
+
+//Width and Gutters
+
+$max-width: 1000px;
+$gutter: 10px;
+
+
+//Breakpoints
+
+$break-lg: '768px';
+
+
+//Margins
+
+$margin-xs: 1rem;
+$margin-sm: 1.875rem;
+$margin-lg: 2.25rem;
+$margin-xl: 4.125rem;
+
+
+//Padding
+
+$padding: 1.25rem;
+$padding-mobile: .8125rem;
+
+
+/***********************
+Fonts
+***********************/
+
+$font-stack-primary: 'Noto Sans KR', sans-serif;

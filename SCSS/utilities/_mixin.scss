@@ -1,0 +1,73 @@
+/***********************
+Create Flex Container
+***********************/
+
+@mixin flex (
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $al-items: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $al-items;
+}
+
+/***********************
+Create Grid
+***********************/
+
+@mixin grid($grid-num) {
+  $color-value: map-get($grid-colors, $grid-num);
+  @if $grid-num == 'col--12' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--3' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--4' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--5' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--6' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--7' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--8' {
+    background-color: $color-value;
+  }
+  padding: $padding-mobile;
+  margin-bottom: $margin-xs;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+/***********************
+Create Button
+***********************/
+
+@mixin button($btn-color) {
+  padding: $padding-mobile;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: $margin-xs;
+}
+
+/***********************
+Media Query
+***********************/
+@mixin large-view {
+  @media (min-width: $break-lg) {
+    @content;
+  }
+}

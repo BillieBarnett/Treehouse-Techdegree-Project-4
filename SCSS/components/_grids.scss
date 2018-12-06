@@ -1,0 +1,118 @@
+//Grid colors
+
+$colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12');
+
+@each $col-num in $colNum {
+  .grid__#{$col-num}.theme__colors {
+    @include grid($col-num);
+  }
+}
+
+.container {
+  color: $font-color;
+  margin-top: $margin-xl;
+  width: 85%;
+  @extend %center;
+}
+
+.grid__row {
+  @extend %center;
+  @include flex($dir: column, $just: center, $al-items: center);
+  margin-bottom: $margin-xl;
+}
+
+.grid {
+
+  &__col--12,
+  &__col--11,
+  &__col--10,
+  &__col--9,
+  &__col--8,
+  &__col--7,
+  &__col--6,
+  &__col--5,
+  &__col--4, 
+  &__col--3, {
+    width: 100%;
+  }
+
+  &__col--9 {
+    text-align: center;
+  }
+}
+
+.grid {
+
+  &__col--6,
+  &__col--12,
+  &__col--3 {
+    @include flex($dir: column); 
+  }
+
+  &__col--3>* {align-self: center;}
+
+  &__col--6 {width: col-width;}
+}
+
+
+@include large-view {
+
+          .grid__col--12 {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+        }
+
+  .grid__row {
+    @include flex($dir: row, $just: center, $al-items: center);
+
+    >.theme__colors {
+        text-align: center;
+    }
+  }
+
+  .grid {
+    flex-direction: row;
+    align-items: center;
+
+    &__col--3 {
+      width: percent(3);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+    &__col--3>* {align-self: flex-start;}
+
+    &__col--4 {
+      width: percent(4);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+
+    &__col--5 {
+      width: percent(5);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+
+    &__col--6 {
+      width: percent(6);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+
+    &__col--7 {
+      width: percent(7);
+    }
+
+    &__col--8 {
+      width: percent(8);
+      max-width: 712.83px;
+      margin-right: 1rem;
+    }
+
+    &__col--9 {
+      width: percent(9);
+    }    
+    &__col--12 {
+      width: percent(12);
+    }
+  }
+}
+
+
