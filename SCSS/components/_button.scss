@@ -49,9 +49,6 @@ $buttonList: (
         cursor: pointer;
       }
 
-      &:active {
-        background-color: darken( (map-get($btn-colors, #{$button}) ), 25%);
-      }
     }
 };
 
