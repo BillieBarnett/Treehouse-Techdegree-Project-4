@@ -8,12 +8,11 @@
 
   &__input {
     border: none;
-    border-bottom: 5px solid $color-primary;
+    border-bottom: 3px solid $color-primary;
     padding: $padding-mobile;
     margin-bottom: $margin-sm;
-    font-size: .9375rem;
+    color: $font-color;
     width: 80%;
-    outline: none;
     @extend %center;
   }
 }

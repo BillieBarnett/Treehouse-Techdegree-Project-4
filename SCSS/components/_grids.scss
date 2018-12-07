@@ -77,23 +77,23 @@ $colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12')
 
     &__col--3 {
       width: percent(3);
-      &:not(:last-child) {margin-right: 1rem;}
+      &:not(:last-child) {margin-right: 1em;}
     }
     &__col--3>* {align-self: flex-start;}
 
     &__col--4 {
       width: percent(4);
-      &:not(:last-child) {margin-right: 1rem;}
+      &:not(:last-child) {margin-right: 1em;}
     }
 
     &__col--5 {
       width: percent(5);
-      &:not(:last-child) {margin-right: 1rem;}
+      &:not(:last-child) {margin-right: 1em;}
     }
 
     &__col--6 {
       width: percent(6);
-      &:not(:last-child) {margin-right: 1rem;}
+      &:not(:last-child) {margin-right: 1em;}
     }
 
     &__col--7 {
@@ -103,7 +103,7 @@ $colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12')
     &__col--8 {
       width: percent(8);
       max-width: 712.83px;
-      margin-right: 1rem;
+      margin-right: 1em;
     }
 
     &__col--9 {

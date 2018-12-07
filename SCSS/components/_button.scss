@@ -29,10 +29,6 @@ $buttonList: (
   }
 }
 
-.btn--default {
-  background-color: #50fce5;
-}
-
 //Button Mixin Loop
 @each $button in $buttonList {
     .btn--#{$button} {
@@ -42,7 +38,7 @@ $buttonList: (
         ($btn-colors, #{$button}));
       @include large-view {
           flex: 1;
-          margin: 0 .5rem;
+          margin: 0 .5em;
       }
 
       &:hover {
@@ -56,7 +52,9 @@ $buttonList: (
 
   .grid__col--12 {
     @include flex($dir: row, $just: center);
-    p {text-align: left;}
+    p {
+      text-align: left;
+    }
   }
 }
 
